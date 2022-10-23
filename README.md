@@ -19,17 +19,8 @@ You can download a prebuilt package for Visual Studio 2019 at https://github.com
 
 ## Building
 
-You can set the global `CMAKE_PREFIX_PATH` environment variable to contain both Qt and LLVM:
-
 ```bash
-setx CMAKE_PREFIX_PATH "d:\Qt\5.12.9\msvc2017_64;d:\CodeBlocks\llvm10-install-full-v2"
-```
-
-Then run CMake:
-
-```bash
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+cmake -B build -DCMAKE_PREFIX_PATH="C:\Qt\5.15.2\msvc2019_64;E:\llvm\llvm-15.0.3-win64" -DCMAKE_INSTALL_PREFIX=install
 ```
 
 You should also be able to use CLion or Visual Studio to open the repository so you don't have to manually run CMake.
